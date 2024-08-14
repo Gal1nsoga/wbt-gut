@@ -8,10 +8,10 @@ import pickle
 
 # main function
 # 设置网页名称
-st.set_page_config(page_title='胃溃疡风险评估工具')
+st.set_page_config(page_title='Gastric Ulcer Risk Prediction Tool')
 
 # 设置网页标题
-st.header('中老年人胃溃疡风险评估网页工具')
+st.header('Middle-aged and Elderly Gastric Ulcer Risk Assessment Web Tool.\n中老年人胃溃疡风险评估网页工具')
 
 # 设置副标题
 st.subheader('欢迎使用本工具！请您输入以下信息进行预测：')
