@@ -40,7 +40,7 @@ st.sidebar.info(
 
 # 填写预测变量
 # 社会人口学
-factor1 = st.radio('性别', ['男性', '女性'], index=None)
+factor1 = st.radio('Gender (性别', ['男性', '女性'], index=None)
 factor2 = st.slider('请填写您的年龄', 45, 120)
 factor3 = st.radio('请填写您的民族', ['汉族', '其他'], index=None)
 factor4 = st.radio('请选择您的学历',
