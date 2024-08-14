@@ -14,7 +14,7 @@ st.set_page_config(page_title='Gastric Ulcer Risk Prediction Tool')
 st.header('Middle-aged and Elderly Gastric Ulcer Risk Assessment Web Tool.\n中老年人胃溃疡风险评估网页工具')
 
 # 设置副标题
-st.subheader('欢迎使用本工具！请您输入以下信息进行预测：')
+st.subheader('Welcome to use this tool! Please enter the following information for prediction:\n欢迎使用本工具！请您输入以下信息进行预测：')
 
 # 添加说明文本
 # 长文本会出现滑动条
