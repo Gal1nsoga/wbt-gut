@@ -46,8 +46,8 @@ factor3 = st.radio('Ethnicity (请填写您的民族)', ['Han (汉族)', 'Others
 factor4 = st.radio('Education Level (请选择您的学历)',
                    ['Up to and including primary/elementary school (小学及以下)', 'Completed primary/elementary school (小学学历)', 'Completed junior high/middle school (初中学历)', 'High school/secondary school education (高中学历)', 'College/university education or higher (大学及以上)', 'Never went to school (从未上过学)', 'Unclear (不清楚)'], index=None)
 factor5 = st.radio('Your marital status (请选择您的婚姻状态)', ['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], index=None)
-factor6 = st.radio('Your standard of living? (您的生活水平如何？)', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
-factor7 = st.radio("How's your physical condition? (您觉得您的身体状况如何？)", ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
+factor6 = st.radio('Your standard of living? (您的生活水平如何？)', ['Very Good (非常好)', 'Good (很好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
+factor7 = st.radio("How's your physical condition? (您觉得您的身体状况如何？)", ['Very Good (非常好)', 'Good (很好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
 factor8 = st.radio('Do you feel energetic? (您觉得您精力充沛吗？)', ['Always (总是)', 'Often (经常)', 'Sometimes (有时)', 'Occasionally (偶尔)', 'Never (从不)', 'Unclear (不清楚)'], index=None)
 # 行为学
 factor9 = st.radio("What's your staple? (您平常主食以什么为主？)", ['Rice (大米)', 'Whole grains (全麦谷物)', 'Flour (面粉)', 'Half rice and half flour (米面各一半)', 'Others (其他)', 'Unclear (不清楚)'], index=None)
@@ -129,8 +129,8 @@ def codeing_fun(input_df):
         ['Up to and including primary/elementary school (小学及以下)', 'Completed primary/elementary school (小学学历)', 'Completed junior high/middle school (初中学历)', 'High school/secondary school education (高中学历)', 'College/university education or higher (大学及以上)', 'Never went to school (从未上过学)', 'Unclear (不清楚)'],
         [0, 1, 2, 3, 4, 5, -1])
     input_df['f41'] = input_df['f41'].replace(['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], [1, 3, 4, 5, -1])
-    input_df['b11'] = input_df['b11'].replace(['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
-    input_df['b12'] = input_df['b12'].replace(['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
+    input_df['b11'] = input_df['b11'].replace(['Very Good (非常好)', 'Good (很好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
+    input_df['b12'] = input_df['b12'].replace(['Very Good (非常好)', 'Good (很好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['b23'] = input_df['b23'].replace(['Always (总是)', 'Often (经常)', 'Sometimes (有时)', 'Occasionally (偶尔)', 'Never (从不)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     # 行为学
     input_df['d1'] = input_df['d1'].replace(['Rice (大米)', 'Whole grains (全麦谷物)', 'Flour (面粉)', 'Half rice and half flour (米面各一半)', 'Others (其他)', 'Unclear (不清楚)'],
