@@ -48,7 +48,7 @@ factor4 = st.radio('Education Level (请选择您的学历)',
 factor5 = st.radio('Your marital status (请选择您的婚姻状态)', ['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], index=None)
 factor6 = st.radio('Your standard of living? (您的生活水平如何？)', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
 factor7 = st.radio("How's your physical condition? (您觉得您的身体状况如何？)", ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
-factor8 = st.radio('Do you feel energetic? (您觉得您精力充沛吗？)', ['总是', '经常', '有时', '偶尔', '从不', '不清楚'], index=None)
+factor8 = st.radio('Do you feel energetic? (您觉得您精力充沛吗？)', ['Always (总是)', 'Often (经常)', 'Sometimes (有时)', 'Occasionally (偶尔)', 'Never (从不)', 'Unclear (不清楚)'], index=None)
 # 行为学
 factor9 = st.radio("What's your staple? (您平常主食以什么为主？)", ['Rice (大米)', 'Whole grains (全麦谷物)', 'Flour (面粉)', 'Half rice and half flour (米面各一半)', 'Others (其他)', 'Unclear (不清楚)'], index=None)
 factor10 = st.radio('How often do you eat fresh fruits? (您吃新鲜水果的频率如何？)', ['Almost every day (几乎每天吃)', 'Often (经常吃)', 'Sometimes (有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
@@ -126,77 +126,65 @@ def codeing_fun(input_df):
     input_df['a1'] = input_df['a1'].replace(['Male (男性)', 'Female (女性)'], [1, 2])
     input_df['a2'] = input_df['a2'].replace(['Han (汉族)', 'Others (其他)'], [1, 2])
     input_df['a53a4'] = input_df['a53a4'].replace(
-        ['小学及以下', '小学学历', '初中学历', '高中学历', '大学及以上', '从未上过学', '不清楚'],
+        ['Up to and including primary/elementary school (小学及以下)', 'Completed primary/elementary school (小学学历)', 'Completed junior high/middle school (初中学历)', 'High school/secondary school education (高中学历)', 'College/university education or higher (大学及以上)', 'Never went to school (从未上过学)', 'Unclear (不清楚)'],
         [0, 1, 2, 3, 4, 5, -1])
-    input_df['f41'] = input_df['f41'].replace(['已婚', '离异', '丧偶', '未婚', '不清楚'], [1, 3, 4, 5, -1])
-    input_df['b11'] = input_df['b11'].replace(['很好', '好', '一般', '不好', '很差', '不清楚'], [1, 2, 3, 4, 5, -1])
-    input_df['b12'] = input_df['b12'].replace(['很好', '好', '一般', '不好', '很差', '不清楚'], [1, 2, 3, 4, 5, -1])
-    input_df['b23'] = input_df['b23'].replace(['总是', '经常', '有时', '偶尔', '从不', '不清楚'], [1, 2, 3, 4, 5, -1])
+    input_df['f41'] = input_df['f41'].replace(['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], [1, 3, 4, 5, -1])
+    input_df['b11'] = input_df['b11'].replace(['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
+    input_df['b12'] = input_df['b12'].replace(['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
+    input_df['b23'] = input_df['b23'].replace(['Always (总是)', 'Often (经常)', 'Sometimes (有时)', 'Occasionally (偶尔)', 'Never (从不)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     # 行为学
-    input_df['d1'] = input_df['d1'].replace(['大米', '全麦谷物', '面粉', '米面各一半', '其他', '不清楚'],
+    input_df['d1'] = input_df['d1'].replace(['Rice (大米)', 'Whole grains (全麦谷物)', 'Flour (面粉)', 'Half rice and half flour (米面各一半)', 'Others (其他)', 'Unclear (不清楚)'],
                                             [1, 2, 3, 4, 5, -1])
-    input_df['d31'] = input_df['d31'].replace(['几乎每天吃', '经常吃', '有时吃', '很少或从不吃', '不清楚'],
+    input_df['d31'] = input_df['d31'].replace(['Almost every day (几乎每天吃)', 'Often (经常吃)', 'Sometimes (有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'],
                                               [1, 2, 3, 4, -1])
-    input_df['d32'] = input_df['d32'].replace(['几乎每天吃', '经常吃', '有时吃', '很少或从不吃', '不清楚'],
+    input_df['d32'] = input_df['d32'].replace(['Almost every day (几乎每天吃)', 'Often (经常吃)', 'Sometimes (有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'],
                                               [1, 2, 3, 4, -1])
-    input_df['d34'] = input_df['d34'].replace(['清淡', '偏咸', '偏甜、辣、生冷', '没有以上习惯'], [1, 2, 3, -1])
+    input_df['d34'] = input_df['d34'].replace(['Light (清淡)', 'Salty (偏咸)', 'Sweet, Spicy, Cold (偏甜、辣、生冷)', 'None of the above habits (没有以上习惯)'], [1, 2, 3, -1])
     input_df['d4meat2'] = input_df['d4meat2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4fish2'] = input_df['d4fish2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4egg2'] = input_df['d4egg2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4bean2'] = input_df['d4bean2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4veg2'] = input_df['d4veg2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4garl2'] = input_df['d4garl2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4milk1'] = input_df['d4milk1'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4nut1'] = input_df['d4nut1'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4alga1'] = input_df['d4alga1'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4vit1'] = input_df['d4vit1'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4drug1'] = input_df['d4drug1'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     input_df['d4tea2'] = input_df['d4tea2'].replace(
-        ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃', '很少或从不吃',
-         '不清楚'], [1, 2, 3, 4, 5, -1])
-    input_df['d6a'] = input_df['d6a'].replace(['井水', '河水或湖水', '泉水', '塘水', '自来水（含纯净水）', '不清楚'],
+        ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
+    input_df['d6a'] = input_df['d6a'].replace(['Well water (井水)', 'River or lake water (河水或湖水)', 'Spring water (泉水)', 'Pond water (塘水)', 'Tap water (including purified water) (自来水（含纯净水）)', 'Unclear (不清楚)'],
                                               [1, 2, 3, 4, 5, -1])
-    input_df['d71'] = input_df['d71'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['d72'] = input_df['d72'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['d81'] = input_df['d81'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['d82'] = input_df['d82'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['d11a'] = input_df['d11a'].replace(['每天', '至少一周一次', '至少一月一次', '偶尔', '从不', '不清楚'], [1, 2, 3, 4, 5, -1])
+    input_df['d71'] = input_df['d71'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['d72'] = input_df['d72'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['d81'] = input_df['d81'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['d82'] = input_df['d82'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['d11a'] = input_df['d11a'].replace(['Every day (每天)', 'At least once a week (至少一周一次)', 'At least once a month (至少一月一次)', 'Occasionally (偶尔)', 'Never (从不)', 'Unclear (不清楚)'], [1, 2, 3, 4, 5, -1])
     # 疾病史
-    input_df['g15n1'] = input_df['g15n1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15j1'] = input_df['g15j1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15q1'] = input_df['g15q1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15r1'] = input_df['g15r1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15t1'] = input_df['g15t1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15v1'] = input_df['g15v1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15g1'] = input_df['g15g1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15i1'] = input_df['g15i1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15c1'] = input_df['g15c1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15d1'] = input_df['g15d1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15s1'] = input_df['g15s1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['g15u1'] = input_df['g15u1'].replace(['是', '否', '不清楚'], [1, 2, -1])
-    input_df['f66'] = input_df['f66'].replace(['是', '否', '不清楚'], [1, 2, -1])
+    input_df['g15n1'] = input_df['g15n1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15j1'] = input_df['g15j1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15q1'] = input_df['g15q1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15r1'] = input_df['g15r1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15t1'] = input_df['g15t1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15v1'] = input_df['g15v1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15g1'] = input_df['g15g1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15i1'] = input_df['g15i1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15c1'] = input_df['g15c1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15d1'] = input_df['g15d1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15s1'] = input_df['g15s1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['g15u1'] = input_df['g15u1'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
+    input_df['f66'] = input_df['f66'].replace(['Yes (是)', 'No (否)', 'Unclear (不清楚)'], [1, 2, -1])
     return input_df
 
 
@@ -258,24 +246,22 @@ def make_predict(input_df):
     return predict_result, predict_probability
 
 
-# 设置一个按钮用于预测
- 
-if st.button('点击进行预测'):
+# 设置一个按钮用于进行预测
+if st.button('Please click the button to predict (请点击进行预测)'):
     # 检查是否完成了所有选项
     if input_df.isnull().values.any():
-        st.warning("您有问题未完成，请确保完成了所有选项！")
+        st.warning("You have unfinished questions, please make sure you have completed all of them！\n您有问题未完成，请确保完成了所有选项！")
     else:
         # 在这里执行预测相关的代码
-
         input_df1 = codeing_fun(input_df=input_df)
         result, probability = make_predict(input_df=input_df1)
-
+        
         # 显示结果
-        st.header('您的胃溃疡风险：')
-
+        st.header('Your cancer risk level:\n您的胃溃疡风险等级：')
         if int(result) == 1:
-            st.write("您可能属于高危人群")
+            st.write("You may belong to a high-risk group.\n您可能属于高危人群")
+            # 这里可以选择是否显示概率
             # st.write(f"概率：{probability}")
         else:
-            st.write("您可能属于低危人群")
+            st.write("You may belong to a low-risk group.\n您可能属于低危人群")
             # st.write(f"概率：{1 - probability}")
