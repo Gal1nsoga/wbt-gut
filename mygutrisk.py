@@ -28,8 +28,8 @@ st.subheader('Welcome to use this tool! Please enter the following information f
 
 # 在侧边栏添加说明
 st.sidebar.info(
-    'You can use this tool to predict the likelihood of having a stomach ulcer. Please note that the prediction is for reference only, and the actual results should be confirmed by a doctor's examination.\n您可使用本工具预测现在发生胃溃疡的可能性。请注意，本预测结果仅供参考，实际结果需以医生检查结果为准。')
-
+    "You can use this tool to predict the likelihood of having a stomach ulcer. Please note that the prediction is for reference only, and the actual results should be confirmed by a doctor's examination.\n您可使用本工具预测现在发生胃溃疡的可能性。请注意，本预测结果仅供参考，实际结果需以医生检查结果为准。")
+                                    
 # Function for online predictions
 # 在侧边栏输入预测因子
 # 添加滑动条
