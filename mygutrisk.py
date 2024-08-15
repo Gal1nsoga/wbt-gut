@@ -257,7 +257,7 @@ if st.button('Please click the button to predict (请点击进行预测)'):
         result, probability = make_predict(input_df=input_df1)
         
         # 显示结果
-        st.header('Your cancer risk level:\n您的胃溃疡风险等级：')
+        st.header('Your gastric ulcer risk level:\n您的胃溃疡风险等级：')
         if int(result) == 1:
             st.write("You may belong to a high-risk group.\n您可能属于高危人群")
             # 这里可以选择是否显示概率
