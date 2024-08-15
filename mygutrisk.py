@@ -45,75 +45,63 @@ factor2 = st.slider('Age (请填写您的年龄)', 45, 120)
 factor3 = st.radio('Ethnicity (请填写您的民族)', ['Han (汉族)', 'Others (其他)'], index=None)
 factor4 = st.radio('Education Level (请选择您的学历)',
                    ['Up to and including primary/elementary school (小学及以下)', 'Completed primary/elementary school (小学学历)', 'Completed junior high/middle school (初中学历)', 'High school/secondary school education (高中学历)', 'College/university education or higher (大学及以上)', 'Never went to school (从未上过学)', 'Unclear (不清楚)'], index=None)
-factor5 = st.radio('请选择您的婚姻状态', ['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], index=None)
-factor6 = st.radio('您的生活水平如何？', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
-factor7 = st.radio('您觉得您的身体状况如何？', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
-factor8 = st.radio('您觉得您精力充沛吗？', ['总是', '经常', '有时', '偶尔', '从不', '不清楚'], index=None)
+factor5 = st.radio('Your marital status (请选择您的婚姻状态)', ['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], index=None)
+factor6 = st.radio('Your standard of living? (您的生活水平如何？)', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
+factor7 = st.radio("How's your physical condition? (您觉得您的身体状况如何？)", ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
+factor8 = st.radio('Do you feel energetic? (您觉得您精力充沛吗？)', ['总是', '经常', '有时', '偶尔', '从不', '不清楚'], index=None)
 # 行为学
-factor9 = st.radio('您平常主食以什么为主？', ['大米', '全麦谷物', '面粉', '米面各一半', '其他', '不清楚'], index=None)
-factor10 = st.radio('您吃新鲜水果的频率如何？', ['几乎每天吃', '经常吃', '有时吃', '很少或从不吃', '不清楚'], index=None)
-factor11 = st.radio('您吃新鲜蔬菜的频率如何？', ['几乎每天吃', '经常吃', '有时吃', '很少或从不吃', '不清楚'], index=None)
-factor12 = st.radio('您的口味主要是什么？', ['清淡', '偏咸', '偏甜、辣、生冷', '没有以上习惯'], index=None)
-factor13 = st.radio('您吃肉的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor14 = st.radio('您吃鱼的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor15 = st.radio('您吃蛋的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor16 = st.radio('您吃豆制品的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor17 = st.radio('您吃腌制品的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor18 = st.radio('您吃大蒜(蒜苗/蒜黄/蒜苔/青蒜等)的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor19 = st.radio('您吃奶制品（牛奶/奶粉/酸奶/冰淇淋等）的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor20 = st.radio('您吃坚果（花生/核桃/栗子/瓜子等）的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor21 = st.radio('您吃菌藻类食物（蘑菇/木耳/银耳/海带/紫菜等）的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor22 = st.radio('您吃维生素保健品素(A/C/E/钙片等)的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor23 = st.radio('您吃药用植物（人参/黄芪/枸杞子/当归等）的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor24 = st.radio('您喝茶的频率如何？',
-                    ['几乎每天吃', '不是每天，但每周至少一次', '不是每周，但每月至少一次', '不是每月，但有时吃',
-                     '很少或从不吃', '不清楚'], index=None)
-factor25 = st.radio('您的饮用水主要是什么？', ['井水', '河水或湖水', '泉水', '塘水', '自来水（含纯净水）', '不清楚'], index=None)
-factor26 = st.radio('您现在是否吸烟？', ['是', '否', '不清楚'], index=None)
-factor27 = st.radio('您过去是否吸烟？', ['是', '否', '不清楚'], index=None)
-factor28 = st.radio('您现在是否经常喝酒？', ['是', '否', '不清楚'], index=None)
-factor29 = st.radio('您过去是否经常喝酒？', ['是', '否', '不清楚'], index=None)
-factor30 = st.radio('您做家务的频率？', ['每天', '至少一周一次', '至少一月一次', '偶尔', '从不', '不清楚'], index=None)
+factor9 = st.radio("What's your staple? (您平常主食以什么为主？)", ['Rice (大米)', 'Whole grains (全麦谷物)', 'Flour (面粉)', 'Half rice and half flour (米面各一半)', 'Others (其他)', 'Unclear (不清楚)'], index=None)
+factor10 = st.radio('How often do you eat fresh fruits? (您吃新鲜水果的频率如何？)', ['Almost every day (几乎每天吃)', 'Often (经常吃)', 'Sometimes (有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor11 = st.radio('How often do you eat fresh vegetables? (您吃新鲜蔬菜的频率如何？)', ['Almost every day (几乎每天吃)', 'Often (经常吃)', 'Sometimes (有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor12 = st.radio('What is your primary taste preference? (您的口味主要是什么？)', ['Light (清淡)', 'Salty (偏咸)', 'Sweet, Spicy, Cold (偏甜、辣、生冷)', 'None of the above habits (没有以上习惯)'], index=None)
+factor13 = st.radio('How often do you eat meat? (您吃肉的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor14 = st.radio('How often do you eat fish?  (您吃鱼的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor15 = st.radio('How often do you eat eggs? (您吃蛋的频率如何？)',
+                   ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor16 = st.radio('How often do you eat soy products? (您吃豆制品的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor17 = st.radio('How often do you eat pickled foods? (您吃腌制品的频率如何？)',
+                   ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor18 = st.radio('How often do you eat garlic (garlic sprouts/green garlic/leeks/chives, etc.)? (您吃大蒜(蒜苗/蒜黄/蒜苔/青蒜等)的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor19 = st.radio('How often do you consume dairy products (milk/powdered milk/yogurt/ice cream, etc.)? (您吃奶制品（牛奶/奶粉/酸奶/冰淇淋等）的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor20 = st.radio('How often do you eat nuts (peanuts/walnuts/chestnuts/sunflower seeds, etc.)? (您吃坚果（花生/核桃/栗子/瓜子等）的频率如何？)',
+                   ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor21 = st.radio('How often do you eat fungi and algae foods (mushrooms/wood ear fungus/silver ear fungus/seaweed/nori, etc.)? (您吃菌藻类食物（蘑菇/木耳/银耳/海带/紫菜等）的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor22 = st.radio('How often do you take vitamin supplements (A/C/E, calcium tablets, etc.)? (您吃维生素保健品素(A/C/E/钙片等)的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor23 = st.radio('How often do you consume medicinal herbs (ginseng/astragalus/wolfberries/angelica, etc.)? (您吃药用植物（人参/黄芪/枸杞子/当归等）的频率如何？)',
+                   ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor24 = st.radio('How often do you drink tea? (您喝茶的频率如何？)',
+                    ['Almost every day (几乎每天吃)', 'Not every day, but at least once a week (不是每天，但每周至少一次)', 'Not every week, but at least once a month (不是每周，但每月至少一次)', 'Not every month, but sometimes (不是每月，但有时吃)', 'Rarely or never (很少或从不吃)', 'Unclear (不清楚)'], index=None)
+factor25 = st.radio('What is your primary source of drinking water?  (您的饮用水主要是什么？)', ['Well water (井水)', 'River or lake water (河水或湖水)', 'Spring water (泉水)', 'Pond water (塘水)', 'Tap water (including purified water) (自来水（含纯净水）)', 'Unclear (不清楚)'], index=None)
+factor26 = st.radio('Are you currently smoking? (您现在是否吸烟？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor27 = st.radio('Did you smoke in the past? (您过去是否吸烟？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor28 = st.radio('Do you currently drink alcohol regularly? (您现在是否经常喝酒？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor29 = st.radio('Did you used to drink alcohol regularly in the past? (您过去是否经常喝酒？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor30 = st.radio('How often do you do household chores? (您做家务的频率？)', ['Every day (每天)', 'At least once a week (至少一周一次)', 'At least once a month (至少一月一次)', 'Occasionally (偶尔)', 'Never (从不)', 'Unclear (不清楚)'], index=None)
 # 疾病史
-factor31 = st.radio('您是否患有关节炎？', ['是', '否', '不清楚'], index=None)
-factor32 = st.radio('您是否患有前列腺疾病？', ['是', '否', '不清楚'], index=None)
-factor33 = st.radio('您是否患有胆囊炎或胆石症？', ['是', '否', '不清楚'], index=None)
-factor34 = st.radio('您是否患有血脂异常？', ['是', '否', '不清楚'], index=None)
-factor35 = st.radio('您是否患有慢性肾炎？', ['是', '否', '不清楚'], index=None)
-factor36 = st.radio('您是否患有子宫肌瘤？', ['是', '否', '不清楚'], index=None)
-factor37 = st.radio('您是否患有白内障？', ['是', '否', '不清楚'], index=None)
-factor38 = st.radio('您是否患有癌症？', ['是', '否', '不清楚'], index=None)
-factor39 = st.radio('您是否患有心脏病？', ['是', '否', '不清楚'], index=None)
-factor40 = st.radio('您是否患有中风及脑血管疾病？', ['是', '否', '不清楚'], index=None)
-factor41 = st.radio('您是否患有风湿或类风湿？', ['是', '否', '不清楚'], index=None)
-factor42 = st.radio('您是否患有乳腺增生？', ['是', '否', '不清楚'], index=None)
-factor43 = st.radio('您童年时期是否经常挨饿？', ['是', '否', '不清楚'], index=None)
+factor31 = st.radio('Do you suffer from arthritis? (您是否患有关节炎？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor32 = st.radio('Do you suffer from prostate disease? (您是否患有前列腺疾病？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor33 = st.radio('Do you suffer from cholecystitis or cholelithiasis? (您是否患有胆囊炎或胆石症？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor34 = st.radio('Do you have abnormal blood lipids? (您是否患有血脂异常？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor35 = st.radio('Do you have chronic nephritis? (您是否患有慢性肾炎？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor36 = st.radio('Do you have uterine fibroids? (您是否患有子宫肌瘤？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor37 = st.radio('Do you have cataracts? (您是否患有白内障？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor38 = st.radio('Do you have cancer? (您是否患有癌症？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor39 = st.radio('Do you have heart disease? (您是否患有心脏病？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor40 = st.radio('Do you have a history of stroke or cerebrovascular disease? (您是否患有中风及脑血管疾病？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor41 = st.radio('Do you have rheumatism or rheumatoid arthritis? (您是否患有风湿或类风湿？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor42 = st.radio('Do you have breast hyperplasia? (您是否患有乳腺增生？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
+factor43 = st.radio('Did you often starve during your childhood? (您童年时期是否经常挨饿？)', ['Yes (是)', 'No (否)', 'Unclear (不清楚)'], index=None)
 # 体格检查
-factor44 = st.slider('请填写您的体重（kg）', 0, 150)
-factor45 = st.slider('请填写您的身高（cm）', 0, 200)
-factor46 = st.slider('请填写您的腰围（cm）', 0, 130)
+factor44 = st.slider('Please fill in your weight(kg) (请填写您的体重（kg）)', 0, 150)
+factor45 = st.slider('Please fill in your height(cm) (请填写您的身高（cm）)', 0, 200)
+factor46 = st.slider('Please fill in your waist circumference(cm) (请填写您的腰围（cm）)', 0, 130)
 
 # 创建dataframe，用于预测
 input_dict = {'a1': factor1, 'trueage': factor2, 'a2': factor3, 'a53a4': factor4,
@@ -135,8 +123,8 @@ input_df = pd.DataFrame([input_dict])
 # 对dataframe中传入的数据进行编码
 def codeing_fun(input_df):
     # 社会人口学
-    input_df['a1'] = input_df['a1'].replace(['男性', '女性'], [1, 2])
-    input_df['a2'] = input_df['a2'].replace(['汉族', '其他'], [1, 2])
+    input_df['a1'] = input_df['a1'].replace(['Male (男性)', 'Female (女性)'], [1, 2])
+    input_df['a2'] = input_df['a2'].replace(['Han (汉族)', 'Others (其他)'], [1, 2])
     input_df['a53a4'] = input_df['a53a4'].replace(
         ['小学及以下', '小学学历', '初中学历', '高中学历', '大学及以上', '从未上过学', '不清楚'],
         [0, 1, 2, 3, 4, 5, -1])
