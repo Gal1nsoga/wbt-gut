@@ -29,7 +29,7 @@ st.subheader('Welcome to use this tool! Please enter the following information f
 # 在侧边栏添加说明
 st.sidebar.info(
     "You can use this tool to predict the likelihood of having a stomach ulcer. Please note that the prediction is for reference only, and the actual results should be confirmed by a doctor's examination.\n您可使用本工具预测现在发生胃溃疡的可能性。请注意，本预测结果仅供参考，实际结果需以医生检查结果为准。")
-st.sidebar.info("This machine learning program was developed using the CLHLS database. After using this program, you will understand your current risk level of having gastic ulcer. This program helps in the early detection and treatment of gastric ulcer, thereby reducing the public health burden associated with gastric ulcer.")                                  
+st.sidebar.info("This machine learning program was developed using the CLHLS database. After using this program, you will understand your current risk level of having gastic ulcer. This program helps in the early detection and treatment of gastric ulcer, thereby reducing the public health burden associated with gastric ulcer.\n这个机器学习程序是使用CLHLS数据库开发的。使用这个程序后，您将了解您目前患胃溃疡的风险水平。这个程序有助于早期检测和治疗胃溃疡，从而减轻与胃溃疡相关的公共卫生负担。")                                  
 # Function for online predictions
 # 在侧边栏输入预测因子
 # 添加滑动条
