@@ -40,14 +40,14 @@ st.sidebar.info(
 
 # 填写预测变量
 # 社会人口学
-factor1 = st.radio('Gender (性别', ['男性', '女性'], index=None)
-factor2 = st.slider('请填写您的年龄', 45, 120)
-factor3 = st.radio('请填写您的民族', ['汉族', '其他'], index=None)
-factor4 = st.radio('请选择您的学历',
-                   ['小学及以下', '小学学历', '初中学历', '高中学历', '大学及以上', '从未上过学', '不清楚'], index=None)
-factor5 = st.radio('请选择您的婚姻状态', ['已婚', '离异', '丧偶', '未婚', '不清楚'], index=None)
-factor6 = st.radio('您的生活水平如何？', ['很好', '好', '一般', '不好', '很差', '不清楚'], index=None)
-factor7 = st.radio('您觉得您的身体状况如何？', ['很好', '好', '一般', '不好', '很差', '不清楚'], index=None)
+factor1 = st.radio('Gender (性别)', ['Male (男性)', 'Female (女性)'], index=None)
+factor2 = st.slider('Age (请填写您的年龄)', 45, 120)
+factor3 = st.radio('Ethnicity (请填写您的民族)', ['Han (汉族)', 'Others (其他)'], index=None)
+factor4 = st.radio('Education Level (请选择您的学历)',
+                   ['Up to and including primary/elementary school (小学及以下)', 'Completed primary/elementary school (小学学历)', 'Completed junior high/middle school (初中学历)', 'High school/secondary school education (高中学历)', 'College/university education or higher (大学及以上)', 'Never went to school (从未上过学)', 'Unclear (不清楚)'], index=None)
+factor5 = st.radio('请选择您的婚姻状态', ['Married (已婚)', 'Divorced (离异)', 'Widowed (丧偶)', 'Single (未婚)', 'Unclear (不清楚)'], index=None)
+factor6 = st.radio('您的生活水平如何？', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
+factor7 = st.radio('您觉得您的身体状况如何？', ['Very Good (非常好)', 'Fair (好)', 'Average (一般)', 'Poor (不好)', 'Unclear (不清楚)'], index=None)
 factor8 = st.radio('您觉得您精力充沛吗？', ['总是', '经常', '有时', '偶尔', '从不', '不清楚'], index=None)
 # 行为学
 factor9 = st.radio('您平常主食以什么为主？', ['大米', '全麦谷物', '面粉', '米面各一半', '其他', '不清楚'], index=None)
